@@ -1,0 +1,92 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --panel: #ffffff;
+  --text: #16213e;
+  --accent: #3867d6;
+  --accent-hover: #274ba3;
+  --line: #d5dced;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #eef3ff 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+.game {
+  width: min(92vw, 420px);
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 16px 35px rgba(22, 33, 62, 0.12);
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  margin: 8px 0 16px;
+  color: #4a5c85;
+}
+
+.status {
+  margin: 0 0 16px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.cell {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  background: #fbfcff;
+  font-size: clamp(2rem, 9vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.cell:hover:enabled {
+  border-color: var(--accent);
+  background: #f1f5ff;
+}
+
+.cell:disabled {
+  cursor: default;
+}
+
+.reset {
+  margin-top: 16px;
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background: var(--accent);
+  cursor: pointer;
+}
+
+.reset:hover {
+  background: var(--accent-hover);
+}
