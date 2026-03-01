@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game">
+      <h1>Tic-Tac-Toe</h1>
+      <p class="subtitle">First to line up 3 symbols wins.</p>
+
+      <p id="status" class="status" aria-live="polite">Player X's turn</p>
+
+      <div class="board" role="grid" aria-label="Tic-Tac-Toe board">
+        <button class="cell" data-cell="0" aria-label="Row 1 Column 1"></button>
+        <button class="cell" data-cell="1" aria-label="Row 1 Column 2"></button>
+        <button class="cell" data-cell="2" aria-label="Row 1 Column 3"></button>
+        <button class="cell" data-cell="3" aria-label="Row 2 Column 1"></button>
+        <button class="cell" data-cell="4" aria-label="Row 2 Column 2"></button>
+        <button class="cell" data-cell="5" aria-label="Row 2 Column 3"></button>
+        <button class="cell" data-cell="6" aria-label="Row 3 Column 1"></button>
+        <button class="cell" data-cell="7" aria-label="Row 3 Column 2"></button>
+        <button class="cell" data-cell="8" aria-label="Row 3 Column 3"></button>
+      </div>
+
+      <button id="reset" class="reset">Start New Game</button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
